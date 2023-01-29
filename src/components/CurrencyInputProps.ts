@@ -35,6 +35,8 @@ export type IntlConfig = {
   currency?: string;
 };
 
+type CustomInputProps = Record<string, unknown>;
+
 export type CurrencyInputProps = Overwrite<
   React.ComponentPropsWithRef<'input'>,
   {
@@ -80,6 +82,13 @@ export type CurrencyInputProps = Overwrite<
      * Default = <input/>
      */
     customInput?: ElementType;
+
+    /**
+     * Custom component props
+     *
+     * Default = <input/>
+     */
+    customInputProps?: CustomInputProps;
 
     /**
      * Limit length of decimals allowed

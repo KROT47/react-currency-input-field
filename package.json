@@ -1,6 +1,6 @@
 {
-  "name": "react-currency-input-field",
-  "version": "3.6.9",
+  "name": "@metamorph/react-currency-input-field",
+  "version": "3.6.12",
   "description": "React <input/> component for formatting currency and numbers.",
   "files": [
     "dist/**/*",
