@@ -107,6 +107,7 @@ describe('<CurrencyInput/> intlConfig', () => {
         float: 1234567,
         formatted: '₹12,34,567',
         value: '1234567',
+        numberCompatibleValue: '1234567',
       });
 
       expect(screen.getByRole('textbox')).toHaveValue('₹12,34,567');

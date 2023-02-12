@@ -6,3 +6,4 @@ export * from './getSuffix';
 export * from './isNumber';
 export * from './padTrimValue';
 export * from './repositionCursor';
+export * from './getNumberCompatibleValue';

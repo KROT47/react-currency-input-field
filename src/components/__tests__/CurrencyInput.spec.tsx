@@ -117,6 +117,7 @@ describe('<CurrencyInput/>', () => {
       float: 100,
       formatted: '£100',
       value: '100',
+      numberCompatibleValue: '100',
     });
   });
 
@@ -134,6 +135,7 @@ describe('<CurrencyInput/>', () => {
       float: 0,
       formatted: '£0',
       value: '0',
+      numberCompatibleValue: '0',
     });
 
     expect(screen.getByRole('textbox')).toHaveValue('£0');
@@ -147,6 +149,7 @@ describe('<CurrencyInput/>', () => {
       float: null,
       formatted: '',
       value: '',
+      numberCompatibleValue: undefined,
     });
 
     expect(screen.getByRole('textbox')).toHaveValue('');
@@ -161,6 +164,7 @@ describe('<CurrencyInput/>', () => {
       float: 123,
       formatted: '£123',
       value: '123',
+      numberCompatibleValue: '123',
     });
   });
 
@@ -172,6 +176,7 @@ describe('<CurrencyInput/>', () => {
       float: null,
       formatted: '',
       value: '',
+      numberCompatibleValue: undefined,
     });
 
     expect(screen.getByRole('textbox')).toHaveValue('');
@@ -185,6 +190,7 @@ describe('<CurrencyInput/>', () => {
       float: 123,
       formatted: '£123',
       value: '123',
+      numberCompatibleValue: '123',
     });
 
     expect(screen.getByRole('textbox')).toHaveValue('£123');

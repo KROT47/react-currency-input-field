@@ -34,6 +34,7 @@ describe('<CurrencyInput/> fixedDecimalLength', () => {
         float: 1.23,
         formatted: '$1.230',
         value: '1.230',
+        numberCompatibleValue: '1.230',
       });
 
       expect(screen.getByRole('textbox')).toHaveValue('$1.230');
@@ -62,6 +63,7 @@ describe('<CurrencyInput/> fixedDecimalLength', () => {
         float: 1.23,
         formatted: '$1.23',
         value: '1.23',
+        numberCompatibleValue: '1.23',
       });
 
       expect(screen.getByRole('textbox')).toHaveValue('$1.23');

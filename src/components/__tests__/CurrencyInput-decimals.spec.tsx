@@ -19,6 +19,7 @@ describe('<CurrencyInput/> decimals', () => {
       float: 1234.56,
       formatted: '£1,234.56',
       value: '1234.56',
+      numberCompatibleValue: '1234.56',
     });
 
     expect(screen.getByRole('textbox')).toHaveValue('£1,234.56');
@@ -32,6 +33,7 @@ describe('<CurrencyInput/> decimals', () => {
       float: 123456,
       formatted: '£123,456',
       value: '123456',
+      numberCompatibleValue: '123456',
     });
 
     expect(screen.getByRole('textbox')).toHaveValue('£123,456');
@@ -45,6 +47,7 @@ describe('<CurrencyInput/> decimals', () => {
       float: 1234.567,
       formatted: '£1,234.567',
       value: '1234.567',
+      numberCompatibleValue: '1234.567',
     });
 
     expect(screen.getByRole('textbox')).toHaveValue('£1,234.567');
@@ -68,6 +71,7 @@ describe('<CurrencyInput/> decimals', () => {
       float: null,
       formatted: '',
       value: '',
+      numberCompatibleValue: undefined,
     });
 
     userEvent.type(screen.getByRole('textbox'), '9');
@@ -77,6 +81,7 @@ describe('<CurrencyInput/> decimals', () => {
       float: 0.9,
       formatted: '$0.9',
       value: '.9',
+      numberCompatibleValue: '.9',
     });
   });
 
@@ -97,6 +102,7 @@ describe('<CurrencyInput/> decimals', () => {
       float: 1,
       formatted: '￥1',
       value: '1',
+      numberCompatibleValue: '1',
     });
   });
 
@@ -117,6 +123,7 @@ describe('<CurrencyInput/> decimals', () => {
       float: null,
       formatted: '',
       value: '',
+      numberCompatibleValue: undefined,
     });
 
     userEvent.type(screen.getByRole('textbox'), '9');
@@ -126,6 +133,7 @@ describe('<CurrencyInput/> decimals', () => {
       float: 0.9,
       formatted: '0,9 €',
       value: ',9',
+      numberCompatibleValue: '.9',
     });
   });
 });

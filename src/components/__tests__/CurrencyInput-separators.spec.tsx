@@ -32,6 +32,7 @@ describe('<CurrencyInput/> separators', () => {
       float: 123456,
       formatted: '£123456',
       value: '123456',
+      numberCompatibleValue: '123456',
     });
 
     expect(screen.getByRole('textbox')).toHaveValue('£123456');
@@ -54,6 +55,7 @@ describe('<CurrencyInput/> separators', () => {
       float: 123456.33,
       formatted: '£123.456,33',
       value: '123456,33',
+      numberCompatibleValue: '123456.33',
     });
 
     expect(screen.getByRole('textbox')).toHaveValue('£123.456,33');

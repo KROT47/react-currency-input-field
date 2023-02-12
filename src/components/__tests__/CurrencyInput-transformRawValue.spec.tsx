@@ -26,6 +26,7 @@ describe('<CurrencyInput/> transformRawValue', () => {
       float: 1234.5,
       formatted: '$1,234.5',
       value: '1234.5',
+      numberCompatibleValue: '1234.5',
     });
 
     expect(screen.getByRole('textbox')).toHaveValue('$1,234.5');

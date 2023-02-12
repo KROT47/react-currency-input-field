@@ -19,6 +19,7 @@ describe('<CurrencyInput/> abbreviated', () => {
       float: 1500,
       formatted: '£1,500',
       value: '1500',
+      numberCompatibleValue: '1500',
     });
 
     expect(screen.getByRole('textbox')).toHaveValue('£1,500');
@@ -35,6 +36,7 @@ describe('<CurrencyInput/> abbreviated', () => {
       float: 2123000,
       formatted: '£2,123,000',
       value: '2123000',
+      numberCompatibleValue: '2123000',
     });
   });
 
@@ -46,6 +48,7 @@ describe('<CurrencyInput/> abbreviated', () => {
       float: 1599000000,
       formatted: '£1,599,000,000',
       value: '1599000000',
+      numberCompatibleValue: '1599000000',
     });
 
     expect(screen.getByRole('textbox')).toHaveValue('£1,599,000,000');
@@ -59,6 +62,7 @@ describe('<CurrencyInput/> abbreviated', () => {
       float: 1.5,
       formatted: '£1.5',
       value: '1.5',
+      numberCompatibleValue: '1.5',
     });
 
     expect(screen.getByRole('textbox')).toHaveValue('£1.5');
@@ -72,6 +76,7 @@ describe('<CurrencyInput/> abbreviated', () => {
       float: null,
       formatted: '',
       value: '',
+      numberCompatibleValue: undefined,
     });
 
     expect(screen.getByRole('textbox')).toHaveValue('');
@@ -82,6 +87,7 @@ describe('<CurrencyInput/> abbreviated', () => {
       float: null,
       formatted: '',
       value: '',
+      numberCompatibleValue: undefined,
     });
 
     expect(screen.getByRole('textbox')).toHaveValue('');
@@ -101,6 +107,7 @@ describe('<CurrencyInput/> abbreviated', () => {
         float: 23,
         formatted: '23',
         value: '23',
+        numberCompatibleValue: '23',
       });
 
       expect(screen.getByRole('textbox')).toHaveValue('23');
@@ -112,6 +119,7 @@ describe('<CurrencyInput/> abbreviated', () => {
         float: 55,
         formatted: '55',
         value: '55',
+        numberCompatibleValue: '55',
       });
 
       expect(screen.getByRole('textbox')).toHaveValue('55');

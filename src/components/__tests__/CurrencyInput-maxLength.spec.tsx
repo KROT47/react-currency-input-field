@@ -45,6 +45,7 @@ describe('<CurrencyInput/> maxLength', () => {
       float: -125,
       formatted: '-£125',
       value: '-125',
+      numberCompatibleValue: '-125',
     });
     expect(screen.getByRole('textbox')).toHaveValue('-£125');
   });

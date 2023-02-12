@@ -19,6 +19,7 @@ import {
   getSuffix,
   FormatValueOptions,
   repositionCursor,
+  getNumberCompatibleValue,
 } from './utils';
 
 export const CurrencyInput: FC<CurrencyInputProps> = forwardRef<
@@ -142,7 +143,13 @@ export const CurrencyInput: FC<CurrencyInputProps> = forwardRef<
       }
 
       if (stringValue === '' || stringValue === '-' || stringValue === decimalSeparator) {
-        onValueChange && onValueChange(undefined, name, { float: null, formatted: '', value: '' });
+        onValueChange &&
+          onValueChange(undefined, name, {
+            float: null,
+            formatted: '',
+            value: '',
+            numberCompatibleValue: undefined,
+          });
         setStateValue(stringValue);
         return;
       }
@@ -174,6 +181,7 @@ export const CurrencyInput: FC<CurrencyInputProps> = forwardRef<
           float: numberValue,
           formatted: formattedValue,
           value: stringValue,
+          numberCompatibleValue: getNumberCompatibleValue(stringValue, decimalSeparator),
         };
         onValueChange(stringValue, name, values);
       }
@@ -238,6 +246,7 @@ export const CurrencyInput: FC<CurrencyInputProps> = forwardRef<
           float: numberValue,
           formatted: formattedValue,
           value: newValue,
+          numberCompatibleValue: getNumberCompatibleValue(newValue, decimalSeparator),
         });
       }
 

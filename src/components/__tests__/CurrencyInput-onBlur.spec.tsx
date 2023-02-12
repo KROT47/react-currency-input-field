@@ -35,6 +35,7 @@ describe('<CurrencyInput/> onBlur', () => {
       float: 123,
       formatted: '$123.00',
       value: '123.00',
+      numberCompatibleValue: '123.00',
     });
 
     expect(screen.getByRole('textbox')).toHaveValue('$123.00');

@@ -28,6 +28,11 @@ export type CurrencyInputOnChangeValues = {
    * Non formatted value as string
    */
   value: string;
+
+  /**
+   * Non formatted value as string with '.' as decimal separator
+   */
+  numberCompatibleValue: string | undefined;
 };
 
 export type IntlConfig = {

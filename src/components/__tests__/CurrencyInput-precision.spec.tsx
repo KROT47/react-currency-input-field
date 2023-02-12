@@ -21,6 +21,7 @@ describe('<CurrencyInput/> decimalScale', () => {
       float: 1.5,
       formatted: '£1.50000',
       value: '1.50000',
+      numberCompatibleValue: '1.50000',
     });
 
     expect(screen.getByRole('textbox')).toHaveValue('£1.50000');
@@ -46,6 +47,7 @@ describe('<CurrencyInput/> decimalScale', () => {
       float: 1,
       formatted: '£1.00',
       value: '1.00',
+      numberCompatibleValue: '1.00',
     });
 
     expect(screen.getByRole('textbox')).toHaveValue('£1.00');

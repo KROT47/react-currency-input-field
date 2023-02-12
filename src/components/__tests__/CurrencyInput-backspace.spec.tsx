@@ -29,6 +29,7 @@ describe('<CurrencyInput/> backspace', () => {
       float: 12.3456,
       formatted: '12,3456 €',
       value: '12,3456',
+      numberCompatibleValue: '12.3456',
     });
     expect(screen.getByRole('textbox')).toHaveValue('12,3456\xa0€');
 
@@ -38,6 +39,7 @@ describe('<CurrencyInput/> backspace', () => {
       float: 12.3,
       formatted: '12,3 €',
       value: '12,3',
+      numberCompatibleValue: '12.3',
     });
     expect(screen.getByRole('textbox')).toHaveValue('12,3\xa0€');
   });
@@ -60,6 +62,7 @@ describe('<CurrencyInput/> backspace', () => {
       float: 1,
       formatted: '£1.0',
       value: '1.0',
+      numberCompatibleValue: '1.0',
     });
     expect(screen.getByRole('textbox')).toHaveValue('£1.0');
 
@@ -69,6 +72,7 @@ describe('<CurrencyInput/> backspace', () => {
       float: 1,
       formatted: '£1.',
       value: '1.',
+      numberCompatibleValue: '1.',
     });
     expect(screen.getByRole('textbox')).toHaveValue('£1.');
 
@@ -78,6 +82,7 @@ describe('<CurrencyInput/> backspace', () => {
       float: 1,
       formatted: '£1',
       value: '1',
+      numberCompatibleValue: '1',
     });
     expect(screen.getByRole('textbox')).toHaveValue('£1');
 
@@ -87,6 +92,7 @@ describe('<CurrencyInput/> backspace', () => {
       float: null,
       formatted: '',
       value: '',
+      numberCompatibleValue: undefined,
     });
     expect(screen.getByRole('textbox')).toHaveValue('');
   });
@@ -108,6 +114,7 @@ describe('<CurrencyInput/> backspace', () => {
       float: 123456789,
       formatted: '$123,456,789',
       value: '123456789',
+      numberCompatibleValue: '123456789',
     });
     expect(screen.getByRole('textbox')).toHaveValue('$123,456,789');
 
@@ -117,6 +124,7 @@ describe('<CurrencyInput/> backspace', () => {
       float: 12345689,
       formatted: '$12,345,689',
       value: '12345689',
+      numberCompatibleValue: '12345689',
     });
     expect(screen.getByRole('textbox')).toHaveValue('$12,345,689');
   });

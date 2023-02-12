@@ -32,6 +32,7 @@ describe('<CurrencyInput/> negative value', () => {
       float: -1234,
       formatted: '-$1,234',
       value: '-1234',
+      numberCompatibleValue: '-1234',
     });
 
     expect(screen.getByRole('textbox')).toHaveValue('-$1,234');
@@ -56,6 +57,7 @@ describe('<CurrencyInput/> negative value', () => {
       float: null,
       formatted: '',
       value: '',
+      numberCompatibleValue: undefined,
     });
 
     expect(screen.getByRole('textbox')).toHaveValue('-');
@@ -84,6 +86,7 @@ describe('<CurrencyInput/> negative value', () => {
       float: null,
       formatted: '',
       value: '',
+      numberCompatibleValue: undefined,
     });
 
     fireEvent.focusOut(screen.getByRole('textbox'));
@@ -109,6 +112,7 @@ describe('<CurrencyInput/> negative value', () => {
       float: 1234,
       formatted: '$1,234',
       value: '1234',
+      numberCompatibleValue: '1234',
     });
 
     expect(screen.getByRole('textbox')).toHaveValue('$1,234');

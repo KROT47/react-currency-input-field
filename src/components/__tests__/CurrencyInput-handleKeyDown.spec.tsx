@@ -35,6 +35,7 @@ describe('<CurrencyInput/> handleKeyDown', () => {
       float: 98,
       formatted: '£98',
       value: '98',
+      numberCompatibleValue: '98',
     });
     expect(screen.getByRole('textbox')).toHaveValue('£98');
 
@@ -43,6 +44,7 @@ describe('<CurrencyInput/> handleKeyDown', () => {
       float: 100,
       formatted: '£100',
       value: '100',
+      numberCompatibleValue: '100',
     });
     expect(screen.getByRole('textbox')).toHaveValue('£100');
   });
@@ -56,6 +58,7 @@ describe('<CurrencyInput/> handleKeyDown', () => {
         float: -1,
         formatted: '-£1',
         value: '-1',
+        numberCompatibleValue: '-1',
       });
       expect(screen.getByRole('textbox')).toHaveValue('-£1');
     });
@@ -68,6 +71,7 @@ describe('<CurrencyInput/> handleKeyDown', () => {
         float: 1,
         formatted: '£1',
         value: '1',
+        numberCompatibleValue: '1',
       });
       expect(screen.getByRole('textbox')).toHaveValue('£1');
     });
@@ -82,6 +86,7 @@ describe('<CurrencyInput/> handleKeyDown', () => {
         float: 97.75,
         formatted: '£97.75',
         value: '97.75',
+        numberCompatibleValue: '97.75',
       });
     });
 
@@ -93,6 +98,7 @@ describe('<CurrencyInput/> handleKeyDown', () => {
         float: 100.25,
         formatted: '£100.25',
         value: '100.25',
+        numberCompatibleValue: '100.25',
       });
     });
   });
@@ -108,6 +114,7 @@ describe('<CurrencyInput/> handleKeyDown', () => {
         float: 94.5,
         formatted: '£94.5',
         value: '94.5',
+        numberCompatibleValue: '94.5',
       });
       expect(screen.getByRole('textbox')).toHaveValue('£94.5');
 
@@ -116,6 +123,7 @@ describe('<CurrencyInput/> handleKeyDown', () => {
         float: 89,
         formatted: '£89.0',
         value: '89.0',
+        numberCompatibleValue: '89.0',
       });
       expect(screen.getByRole('textbox')).toHaveValue('£89.0');
     });
@@ -130,6 +138,7 @@ describe('<CurrencyInput/> handleKeyDown', () => {
         float: 105.5,
         formatted: '£105.5',
         value: '105.5',
+        numberCompatibleValue: '105.5',
       });
       expect(screen.getByRole('textbox')).toHaveValue('£105.5');
 
@@ -138,6 +147,7 @@ describe('<CurrencyInput/> handleKeyDown', () => {
         float: 111,
         formatted: '£111.0',
         value: '111.0',
+        numberCompatibleValue: '111.0',
       });
       expect(screen.getByRole('textbox')).toHaveValue('£111.0');
     });
@@ -164,6 +174,7 @@ describe('<CurrencyInput/> handleKeyDown', () => {
         float: -98,
         formatted: '-£98',
         value: '-98',
+        numberCompatibleValue: '-98',
       });
       expect(screen.getByRole('textbox')).toHaveValue('-£98');
     });
@@ -188,6 +199,7 @@ describe('<CurrencyInput/> handleKeyDown', () => {
         float: 98,
         formatted: '£98',
         value: '98',
+        numberCompatibleValue: '98',
       });
       expect(screen.getByRole('textbox')).toHaveValue('£98');
     });
@@ -205,6 +217,7 @@ describe('<CurrencyInput/> handleKeyDown', () => {
       float: 2.99,
       formatted: '£2.99',
       value: '2.99',
+      numberCompatibleValue: '2.99',
     });
     expect(screen.getByRole('textbox')).toHaveValue('£2.99');
 
@@ -213,6 +226,7 @@ describe('<CurrencyInput/> handleKeyDown', () => {
       float: 1.99,
       formatted: '£1.99',
       value: '1.99',
+      numberCompatibleValue: '1.99',
     });
     expect(screen.getByRole('textbox')).toHaveValue('£1.99');
 
@@ -221,6 +235,7 @@ describe('<CurrencyInput/> handleKeyDown', () => {
       float: 0.99,
       formatted: '£0.99',
       value: '0.99',
+      numberCompatibleValue: '0.99',
     });
     expect(screen.getByRole('textbox')).toHaveValue('£0.99');
 
@@ -229,6 +244,7 @@ describe('<CurrencyInput/> handleKeyDown', () => {
       float: -0.01,
       formatted: '-£0.01',
       value: '-0.01',
+      numberCompatibleValue: '-0.01',
     });
     expect(screen.getByRole('textbox')).toHaveValue('-£0.01');
   });
@@ -252,6 +268,7 @@ describe('<CurrencyInput/> handleKeyDown', () => {
       float: 0,
       formatted: '£0',
       value: '0',
+      numberCompatibleValue: '0',
     });
     expect(screen.getByRole('textbox')).toHaveValue('£0');
 
@@ -260,6 +277,7 @@ describe('<CurrencyInput/> handleKeyDown', () => {
       float: 0,
       formatted: '£0',
       value: '0',
+      numberCompatibleValue: '0',
     });
     expect(screen.getByRole('textbox')).toHaveValue('£0');
 
@@ -268,6 +286,7 @@ describe('<CurrencyInput/> handleKeyDown', () => {
       float: 1,
       formatted: '£1',
       value: '1',
+      numberCompatibleValue: '1',
     });
     expect(screen.getByRole('textbox')).toHaveValue('£1');
   });
@@ -290,6 +309,7 @@ describe('<CurrencyInput/> handleKeyDown', () => {
       float: 45,
       formatted: '£45',
       value: '45',
+      numberCompatibleValue: '45',
     });
     expect(screen.getByRole('textbox')).toHaveValue('£45');
 
@@ -298,6 +318,7 @@ describe('<CurrencyInput/> handleKeyDown', () => {
       float: 45,
       formatted: '£45',
       value: '45',
+      numberCompatibleValue: '45',
     });
     expect(screen.getByRole('textbox')).toHaveValue('£45');
 
@@ -306,6 +327,7 @@ describe('<CurrencyInput/> handleKeyDown', () => {
       float: 44,
       formatted: '£44',
       value: '44',
+      numberCompatibleValue: '44',
     });
     expect(screen.getByRole('textbox')).toHaveValue('£44');
   });
