@@ -7,7 +7,7 @@ import React, {
   useMemo,
   useImperativeHandle,
 } from 'react';
-import { CurrencyInputProps, CurrencyInputOnChangeValues } from './CurrencyInputProps';
+import { CurrencyInputProps, CurrencyInputOnChangeValues, InputProps } from './CurrencyInputProps';
 import {
   isNumber,
   cleanValue,
@@ -34,7 +34,7 @@ export const CurrencyInput: FC<CurrencyInputProps> = forwardRef<
       name,
       className,
       customInput,
-      customInputProps,
+      getCustomInputProps = (props: InputProps) => props,
       decimalsLimit,
       defaultValue,
       disabled = false,
@@ -358,7 +358,7 @@ export const CurrencyInput: FC<CurrencyInputProps> = forwardRef<
       return stateValue;
     };
 
-    const inputProps: React.ComponentPropsWithRef<'input'> = {
+    const inputProps: InputProps = {
       type: 'text',
       inputMode: 'decimal',
       id,
@@ -378,7 +378,7 @@ export const CurrencyInput: FC<CurrencyInputProps> = forwardRef<
 
     if (customInput) {
       const CustomInput = customInput;
-      return <CustomInput {...inputProps} {...customInputProps} />;
+      return <CustomInput {...getCustomInputProps(inputProps)} />;
     }
 
     return <input {...inputProps} />;

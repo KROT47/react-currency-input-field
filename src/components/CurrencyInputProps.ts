@@ -2,6 +2,8 @@ import React, { ElementType } from 'react';
 
 type Overwrite<T, U> = Pick<T, Exclude<keyof T, keyof U>> & U;
 
+export type InputProps = React.ComponentPropsWithRef<'input'>;
+
 /**
  * Value in different formats
  *
@@ -43,7 +45,7 @@ export type IntlConfig = {
 type CustomInputProps = Record<string, unknown>;
 
 export type CurrencyInputProps = Overwrite<
-  React.ComponentPropsWithRef<'input'>,
+  InputProps,
   {
     /**
      * User defined abbreviations
@@ -89,11 +91,10 @@ export type CurrencyInputProps = Overwrite<
     customInput?: ElementType;
 
     /**
-     * Custom component props
+     * Custom component props getter
      *
-     * Default = <input/>
      */
-    customInputProps?: CustomInputProps;
+    getCustomInputProps?: (props: InputProps) => CustomInputProps;
 
     /**
      * Limit length of decimals allowed
